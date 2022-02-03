@@ -33,7 +33,7 @@ const Swap = () => {
       fromToken != undefined &&
       toToken != undefined
     ) {
-      setFee(0.5);
+      setFee(0.3 * fromValue);
       setSlippage(0.8);
       setOut(toValue - 0.8);
     }
@@ -173,21 +173,29 @@ const Swap = () => {
                   <Col flex={1}>
                     <Statistic
                       title="Fee(0.3%)"
-                      value={fee == undefined ? "-" : fee}
+                      value={
+                        fee == undefined
+                          ? "-"
+                          : `${fee.toFixed(1)} ${fromToken}`
+                      }
                     />
                   </Col>
                   <Col flex={1}>
                     <Statistic
                       title="Slippage"
                       value={
-                        slippage == undefined ? "-" : `${slippage} ${toToken}`
+                        slippage == undefined
+                          ? "-"
+                          : `${slippage.toFixed(1)} ${toToken}`
                       }
                     />
                   </Col>
                   <Col flex={1}>
                     <Statistic
                       title="Real Out"
-                      value={out == undefined ? "-" : `${out} ${toToken}`}
+                      value={
+                        out == undefined ? "-" : `${out.toFixed(1)} ${toToken}`
+                      }
                     />
                   </Col>
                 </Row>
