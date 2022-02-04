@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Zoo Swap",
+  "name": "UI of the decentralized exchange service between ethereum and zoo tokens.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "zoo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "zoo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "zoo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
